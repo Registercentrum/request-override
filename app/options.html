@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css styles/options.css -->
+  <link href="styles/options.css" rel="stylesheet">
+  <!-- endbuild -->
+</head>
+
+<body>
+  <div class="jumbotron">
+    <div class="container">
+      <h1><span id="rover-app-name">Request Override</span> <span id="rover-version"></span></h1>
+      <p id="rover-description"></p>
+    </div>
+  </div>
+  <div class="container options-container">
+    <legend>Inställningar<i class="glyphicon glyphicon-cog pull-right"></i></legend>
+    <label>API-metoder</label>
+    <div id="api-method-form-container"></div>
+    <label>Whitelist</label>
+    <div id="whitelist-form-container"></div>
+    <form class="form" id="apikey-form">
+      <div class="form-group">
+        <label for="apiKey">API-nyckel</label>
+        <input type="text" class="form-control" id="apiKey" placeholder="API-nyckel">
+      </div>
+      <div class="form-group">
+        <label for="prodUrl">Produktions-URL</label>
+        <input type="text" class="form-control" id="prodUrl" placeholder="e.g. https://production-server.prod">
+      </div>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#importModal">Importera inställningar</button>
+      <button data-loading-text="Sparar..." class=" btn btn-primary ">Spara</button>
+    </form>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="importModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form class="form" id="import-settings-form">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Importera konfiguration</h4>
+          </div>
+          <div class="modal-body">
+            <div id="import-error"></div>
+            <div class="form-group">
+              <label for="import-settings">Konfiguration</label>
+              <textarea type="text" class="form-control" id="import-settings" placeholder="{ }" rows="10"></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Stäng</button>
+            <button type="submit" class="btn btn-primary">Importera</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js scripts/options.js -->
+  <script src="scripts/options.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Request Override",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "Meant to override xhr requests from development/demo servers and redirect them to the production server. Built with focus on Stratum.",
+    "description": "The description of the application"
+  }
+}

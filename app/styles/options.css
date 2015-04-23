@@ -1,0 +1,10 @@
+body{
+  padding-bottom: 60px;
+}
+.options-container{
+  max-width: 600px;
+}
+.rover-text{
+  color: #B86C6C;
+  font-weight: bold;
+}
